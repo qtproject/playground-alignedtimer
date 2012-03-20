@@ -43,6 +43,7 @@
 #define QALIGNEDTIMER_SYSTEMHB_P_H
 
 #include "qalignedtimer.h"
+#include "qalignedtimerglobal.h"
 
 #include <QSocketNotifier>
 
@@ -50,8 +51,7 @@ extern "C" {
 #include <systemhb/libsystemhb.h>
 }
 
-QT_BEGIN_HEADER
-QT_BEGIN_NAMESPACE
+QTALIGNEDTIMER_BEGIN_NAMESPACE
 
 class QAlignedTimerPrivate : public QObject
 {
@@ -99,7 +99,6 @@ private Q_SLOTS:
     void heartbeatReceived(int sock);
 };
 
-QT_END_NAMESPACE
-QT_END_HEADER
+QTALIGNEDTIMER_END_NAMESPACE
 
 #endif // QALIGNEDTIMER_SYSTEMHB_P_H

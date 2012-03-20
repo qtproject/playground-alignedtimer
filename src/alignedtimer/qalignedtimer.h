@@ -43,13 +43,13 @@
 #define QALIGNEDTIMER_H
 
 #include <QObject>
+#include "qalignedtimerglobal.h"
 
-QT_BEGIN_HEADER
-QT_BEGIN_NAMESPACE
+QTALIGNEDTIMER_BEGIN_NAMESPACE
 
 class QAlignedTimerPrivate;
 
-class Q_CORE_EXPORT QAlignedTimer : public QObject
+class Q_ALIGNEDTIMER_EXPORT QAlignedTimer : public QObject
 {
     Q_OBJECT
 
@@ -98,7 +98,6 @@ private:
     QAlignedTimerPrivate *d;
 };
 
-QT_END_NAMESPACE
-QT_END_HEADER
+QTALIGNEDTIMER_END_NAMESPACE
 
 #endif // QALIGNEDTIMER_H

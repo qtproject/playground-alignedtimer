@@ -46,7 +46,7 @@
 #include <errno.h>
 #include <stdio.h>
 
-QT_BEGIN_NAMESPACE
+QTALIGNEDTIMER_BEGIN_NAMESPACE
 
 QAlignedTimerPrivate::QAlignedTimerPrivate(QObject *parent)
     : QObject(parent)
@@ -58,7 +58,7 @@ QAlignedTimerPrivate::QAlignedTimerPrivate(QObject *parent)
     , m_systemhbdHandler(0)
     , m_notifier(0)
 {
-    m_systemhbdHandler = systemhb_open(0);
+    m_systemhbdHandler = systemhb_open();
 
     if (!m_systemhbdHandler) {
         m_lastError = QAlignedTimer::InternalError;
@@ -228,4 +228,6 @@ bool QAlignedTimerPrivate::isActive() const
     return m_running;
 }
 
-QT_END_NAMESPACE
+#include "moc_qalignedtimer_systemhb_p.cpp"
+
+QTALIGNEDTIMER_END_NAMESPACE

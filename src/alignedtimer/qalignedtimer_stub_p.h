@@ -43,9 +43,9 @@
 #define QALIGNEDTIMER_STUB_P_H
 
 #include "qalignedtimer.h"
+#include "qalignedtimerglobal.h"
 
-QT_BEGIN_HEADER
-QT_BEGIN_NAMESPACE
+QTALIGNEDTIMER_BEGIN_NAMESPACE
 
 class QAlignedTimerPrivate : public QObject
 {
@@ -81,7 +81,6 @@ public Q_SLOTS:
     void stop();
 };
 
-QT_END_NAMESPACE
-QT_END_HEADER
+QTALIGNEDTIMER_END_NAMESPACE
 
 #endif // QALIGNEDTIMER_STUB_P_H

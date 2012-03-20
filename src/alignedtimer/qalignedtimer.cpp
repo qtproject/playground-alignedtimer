@@ -46,7 +46,7 @@
 #else
 #include "qalignedtimer_stub_p.h"
 #endif
-QT_BEGIN_NAMESPACE
+QTALIGNEDTIMER_BEGIN_NAMESPACE
 
 Q_GLOBAL_STATIC(QAlignedTimerPrivate, alignedTimerPrivate)
 
@@ -93,7 +93,6 @@ QAlignedTimer::QAlignedTimer(QObject *parent)
 {
     d = new QAlignedTimerPrivate(this);
     connect(d, SIGNAL(timeout()), this, SIGNAL(timeout()));
-    connect(d, SIGNAL(error(QAlignedTimer::AlignedTimerError)), this, SIGNAL(error(QAlignedTimer::AlignedTimerError)));
 }
 
 /*!
@@ -268,4 +267,6 @@ bool QAlignedTimer::isActive () const
     return d->isActive();
 }
 
-QT_END_NAMESPACE
+#include "moc_qalignedtimer.cpp"
+
+QTALIGNEDTIMER_END_NAMESPACE

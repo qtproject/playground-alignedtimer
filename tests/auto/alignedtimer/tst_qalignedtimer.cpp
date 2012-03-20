@@ -41,7 +41,7 @@
 
 #include <QtTest/QtTest>
 #include <qalignedtimer.h>
-
+QTALIGNEDTIMER_USE_NAMESPACE
 Q_DECLARE_METATYPE(QAlignedTimer::AlignedTimerError);
 
 static bool waitForSignal(QObject *obj, const char *signal, int timeout = 0)

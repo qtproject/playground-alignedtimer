@@ -56,6 +56,14 @@
 #  define QTALIGNEDTIMER_USE_NAMESPACE using namespace QtAlignedTimer;
 #endif
 
+#if !defined(Q_ALIGNEDTIMER_EXPORT)
+#  if defined(QT_SHARED)
+#    define Q_ALIGNEDTIMER_EXPORT Q_DECL_EXPORT
+#  else
+#    define Q_ALIGNEDTIMER_EXPORT
+#  endif
+#endif
+
 #define QTALIGNEDTIMER_VERSION_NAME "org.qt-project.Qt.alignedtimer.api.version"
 #define QTALIGNEDTIMER_IMPLEMENTATION_VERSION_NAME "org.qt-project.Qt.alignedtimer.implementation.version"
 #define QTALIGNEDTIMER_VERSION 1

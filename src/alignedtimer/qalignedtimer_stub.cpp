@@ -42,7 +42,7 @@
 #include "qalignedtimer.h"
 #include "qalignedtimer_stub_p.h"
 
-QT_BEGIN_NAMESPACE
+QTALIGNEDTIMER_BEGIN_NAMESPACE
 
 QAlignedTimerPrivate::QAlignedTimerPrivate(QObject *parent)
     : QObject(parent)
@@ -119,4 +119,6 @@ bool QAlignedTimerPrivate::isActive () const
     return false;
 }
 
-QT_END_NAMESPACE
+#include "moc_qalignedtimer_stub_p.cpp"
+
+QTALIGNEDTIMER_END_NAMESPACE
