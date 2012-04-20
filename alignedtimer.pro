@@ -1,6 +1,7 @@
    TEMPLATE = subdirs
    CONFIG += ordered
 
+   include(doc/doc.pri)
 
    module_alignedtimer_src.subdir = src
    module_alignedtimer_src.target = module-alignedtimer-src

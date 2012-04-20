@@ -52,7 +52,6 @@ Q_GLOBAL_STATIC(QAlignedTimerPrivate, alignedTimerPrivate)
 
 /*!
     \class QAlignedTimer
-    \ingroup events
     \brief The QAlignedTimer class provides a service for applications to synchronize their activity.
 
     QAlignedTimer is a fuzzy timer that allows applications that must do periodic activity like
@@ -65,7 +64,6 @@ Q_GLOBAL_STATIC(QAlignedTimerPrivate, alignedTimerPrivate)
 
     The recommended use case is when app uses single-shot timer only: set mintime 0 for the first call
     'to jump to the train' and mintime > 0 after 1st wakeup.
-    \sa QBasicTimer, QTimer, QTimerEvent, QObject::timerEvent(), Timers,
 */
 
 /*!
